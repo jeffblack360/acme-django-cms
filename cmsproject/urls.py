@@ -4,12 +4,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'cmsproject.views.home', name='home'),
-    # url(r'^cmsproject/', include('cmsproject.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
+    url(r'^$', 'cms.views.index'),
+    url(r'^cms/', include('cms.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
